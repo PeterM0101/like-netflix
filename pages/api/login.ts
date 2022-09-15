@@ -9,7 +9,7 @@ const login = async (req: NextApiRequest, res: NextApiResponse) => {
         try {
             const auth = req.headers.authorization;
             const DIDToken = auth ? auth?.slice(7): "";
-            console.log({DIDToken})
+
             if (DIDToken) {
                 const metadata = await magicAdmin.users.getMetadataByToken(DIDToken);
                 const jwtToken = jwt.sign(

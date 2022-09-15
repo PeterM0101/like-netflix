@@ -16,7 +16,6 @@ const Banner: FC<BannerProps> = ({title, subTitle, imgUrl, videoId}) => {
 
     const handleOnPlay = () => {
         router.push(`/video/${videoId}`);
-        console.log('Ok')
     };
 
     return (

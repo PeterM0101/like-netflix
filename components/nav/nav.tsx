@@ -48,10 +48,8 @@ const NavBar: FC = () => {
             //     },
             // }
             );
-            console.log('response: ', response)
 
             await response.json();
-            // console.log('data: ', data)
         } catch (error) {
             console.error("Something went wrong!!!", (error as Error).message);
             await router.push("/login");

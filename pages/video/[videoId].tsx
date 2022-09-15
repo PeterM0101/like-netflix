@@ -45,7 +45,6 @@ const VideoId: FC<VideoIdProps> = ({video}) => {
             if (!firstTime.current) {
                 (
                     async () => {
-                        console.log('Add film to stats...')
                         const response = await fetch('/api/stats', {
                             method: 'POST',
                             headers: {
@@ -53,7 +52,6 @@ const VideoId: FC<VideoIdProps> = ({video}) => {
                             },
                             body: JSON.stringify({videoId, favourited: likeStatus ? 1 : dislikeStatus ? 0 : null})
                         })
-                        console.log('data: ', await response.json())
                     }
                 )();
             }

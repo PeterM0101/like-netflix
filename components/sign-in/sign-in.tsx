@@ -35,7 +35,7 @@ const SignIn: FC<SignInProps> = () => {
             try {
                 setIsLoading(true);
                 const didToken = await magic.auth.loginWithMagicLink({ email });
-                console.log({didToken})
+
                 if (didToken) {
                     const response = await fetch('api/login', {
                         method: "POST",
@@ -45,7 +45,7 @@ const SignIn: FC<SignInProps> = () => {
                         }
                     })
                     const loggedInResponse = await response.json();
-                    console.log({loggedInResponse})
+
                     if (loggedInResponse?.done) {
                         // (e.target as HTMLFormElement).reset();
                         await router.push('/')

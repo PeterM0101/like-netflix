@@ -42,7 +42,6 @@ export const createNewUser = async (token: string, metadata: MagicUserMetadata) 
         {email, issuer, publicAddress},
         token
     );
-    console.log({response})
     return response
 }
 
@@ -109,8 +108,6 @@ export const insertNewStat = async (metadata: HasuraMetadata, token: string) => 
         token
     );
 
-    console.log({response})
-
     return response
 }
 
@@ -137,8 +134,6 @@ export const updateStatWatched = async (metadata: HasuraMetadata, token: string)
         {userId, videoId, watched, favourited},
         token
     );
-
-    console.log({response})
 
     return response
 }

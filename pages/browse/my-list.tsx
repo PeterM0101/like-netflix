@@ -14,7 +14,7 @@ interface MyListProps {
 }
 
 const MyList: FC<MyListProps> = ({myListVideos}) => {
-    console.log(myListVideos)
+
     return (
         <div className={styles.container}>
             <Head>

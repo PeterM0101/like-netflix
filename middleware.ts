@@ -3,7 +3,6 @@ import {NextRequest, NextResponse} from "next/server";
 export async function middleware(req: NextRequest) {
 
     // if (req.nextUrl.pathname.includes('/my-list')) {
-    //     console.log("fuck");
     //     return NextResponse.redirect(new URL('/', req.url))
     // }
     const {pathname} = req.nextUrl;

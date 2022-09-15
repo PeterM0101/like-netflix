@@ -5,7 +5,6 @@ import {verifyToken} from "../../lib/utils";
 const stats = async (req: NextApiRequest, res: NextApiResponse) => {
     try {
         const token = req.cookies.token;
-        console.log({token})
         if (!token) {
             res.status(403).send({})
         } else {
